@@ -1,0 +1,74 @@
+package upp1;
+import javax.swing.JOptionPane;
+
+
+public class Upp1 {
+
+ 
+    public static void main(String[] args) {
+        
+        
+        
+        String full_name;
+        full_name = JOptionPane.showInputDialog ("Skriv ditt namn", "Namn");
+        
+        String dob;
+        dob = JOptionPane.showInputDialog ("Skriv ditt personnummer", 
+                "ååmmdd-nnnn");
+        
+        String monthStr = "";
+        String dayStr = "";
+        int month = Integer.parseInt(dob.substring(2, 4));
+        monthStr = monthToString(month);
+        int day = Integer.parseInt(dob.substring(4, 6));
+        
+        dayStr = Integer.toString(day) + ":e";
+        
+        String adress = JOptionPane.showInputDialog("Skriv din adress", "Adress");
+
+        String msg = "Välkommen " + full_name + ", då du fyller år den " 
+                + dayStr + " " + monthStr + " kommer vi komma till dig, " 
+                + adress + " och fira dig";
+        
+        JOptionPane.showMessageDialog(null, msg);
+        
+    }
+    
+    public static String monthToString(int month) {
+        String monthStr = "";
+        if(month < 1 || month > 12) {
+            return "felaktig månad";
+        }
+        switch (month) {
+            case 1: monthStr = "januari";
+                break;
+            case 2: monthStr = "februari";
+                break;
+            case 3: monthStr = "mars";
+                break;
+            case 4: monthStr = "april";
+                break;
+            case 5: monthStr = "maj";
+                break;
+            case 6: monthStr = "juni";
+                break;
+            case 7: monthStr = "juli";
+                break;
+            case 8: monthStr = "augusti";
+                break;
+            case 9: monthStr = "september";
+                break;
+            case 10: monthStr = "oktober";
+                break;
+            case 11: monthStr = "november";
+                break;
+            case 12: monthStr = "december";
+                break;
+        }
+        
+        return monthStr;
+    } 
+    
+}
+
+
