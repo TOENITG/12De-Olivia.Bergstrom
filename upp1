@@ -71,4 +71,15 @@ public class Upp1 {
     
 }
 
+/*
+Tack!
+
+Koden är helt odokumenterad, så det får du komplettera.
+Sedan så hade du gärna fått spara hela projektet i Git. Filerna saknar ändelsen .java, så jag kan inte kompliera dem utan att spara om dem.
+
+Kul och bra att du bryter ut hanteringen av månadsnamn till en separat metod. Du hade kunnat lösa den kortare genom att använda en array.
+Jag kommer att gå igenom arrayer.
+
+*/
+
 
