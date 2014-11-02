@@ -1,0 +1,109 @@
+package taltillmig;
+import javax.swing.JOptionPane;
+import java.util.Scanner;
+
+
+public class TalTillMig {
+
+    
+    public static void main(String[] args) {
+        int nInt1 = 0, nInt2 = 0;
+        double nDouble1 = 0, nDouble2 = 0, nRes1 = 0;
+        Scanner input = new Scanner( System.in );
+        System.out.println("Skriv ett tal: ");
+        String inputStr = input.nextLine();
+        
+        if(checkIfDouble(inputStr) == true) {
+            nDouble1 = Double.parseDouble(inputStr);
+        } else if(checkIfInt(inputStr) == true) {
+            nInt1 = Integer.parseInt(inputStr);
+           
+        }
+        
+        System.out.println("Skriv ett tal till: ");
+        inputStr = input.nextLine();
+        
+        if(checkIfDouble(inputStr) == true) {
+            nDouble2 = Double.parseDouble(inputStr);
+        } else if(checkIfInt(inputStr) == true) {
+            nInt2 = Integer.parseInt(inputStr);
+           
+        }
+        
+        nRes1 = nDouble1 + (double) nInt1 + nDouble2 + (double) nInt2;
+        
+        System.out.println("Addition: " + Double.toString(nRes1));
+        
+        nDouble1 = 0;
+        nInt1 = 0;
+        
+        System.out.println("Skriv ytterligare ett tal");
+        inputStr = input.nextLine();
+        
+        if(checkIfDouble(inputStr) == true) {
+            nDouble1 = Double.parseDouble(inputStr);
+        } else if(checkIfInt(inputStr) == true) {
+            nInt1 = Integer.parseInt(inputStr);
+        }
+        
+        nRes1 = nRes1 - nDouble1 - (double) nInt1;
+        
+        System.out.println("Subtraktion: " + Double.toString(nRes1));
+        
+        nDouble1 = 1;
+        nInt1 = 1;
+        
+        System.out.println("Och skriv ett tal till...");
+        inputStr = input.nextLine();
+        
+        if(checkIfDouble(inputStr) == true) {
+            nDouble1 = Double.parseDouble(inputStr);
+        } else if(checkIfInt(inputStr) == true) {
+            nInt1 = Integer.parseInt(inputStr);
+           
+        }
+        
+        nRes1 = nRes1 * nDouble1 * (double) nInt1;
+        
+        System.out.println("Multiplikation: " + Double.toString(nRes1));
+        
+        nDouble1 = 1;
+        nInt1 = 1;
+        
+        System.out.println("Skriv sista talet");
+        inputStr = input.nextLine();
+        
+        if(checkIfDouble(inputStr) == true) {
+            nDouble1 = Double.parseDouble(inputStr);
+        } else if(checkIfInt(inputStr) == true) {
+            nInt1 = Integer.parseInt(inputStr);
+        }  
+        
+        nRes1 = nRes1 / nDouble1 / (double) nInt1;
+        
+        System.out.println("Division: " + Double.toString(nRes1));
+            
+        
+        
+    }
+    
+    public static boolean checkIfInt(String str) {
+        try {
+            Integer.parseInt(str);
+            return true;
+        } catch (Exception e) {
+            return false;
+                    
+        }
+    }
+    
+    public static boolean checkIfDouble(String str) {
+        try {
+            Double.parseDouble(str);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
+}
